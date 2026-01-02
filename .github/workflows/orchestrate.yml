@@ -11,5 +11,3 @@ on:
 jobs:
   build-repoA:
     uses: amisovic/poc2repoA/.github/workflows/build.yml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.PAT_WORKFLOWS }}
