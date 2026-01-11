@@ -63,7 +63,7 @@ jobs:
         content_response=$(curl -s -w "%{http_code}" -o /dev/null \
           -H "Authorization: token ${{ steps.app-token.outputs.token }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          "https://api.github.com/repos/${{ inputs.repo }}/contents/pom.xml")
+          "https://api.github.com/repos/${{ inputs.repo }}/contents/README.md")
         
         if [ "$content_response" = "200" ]; then
           echo "   ✅ GitHub App has content access to ${{ inputs.repo }}"
