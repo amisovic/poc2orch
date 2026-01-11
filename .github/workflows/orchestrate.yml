@@ -15,4 +15,4 @@ jobs:
   build-repoA:
     uses: ismenablement/poc2repoA/.github/workflows/build.yml@main
     with:
-      branch: ${{ github.event.inputs.branch }}
+      branch: ${{ inputs.branch }}
