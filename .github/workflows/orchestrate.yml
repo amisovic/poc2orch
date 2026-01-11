@@ -1,6 +1,6 @@
 name: Orchestrate
 
-run-name: Orchestrate on ${{ inputs.branch }}
+run-name: Orchestrate on ${{ github.event.inputs.branch }}
 
 on:
   workflow_dispatch:
@@ -13,6 +13,6 @@ on:
 
 jobs:
   build-repoA:
-    uses: ismenablement/poc2repoA/.github/workflows/build.yml@${{ inputs.branch }}
+    uses: ismenablement/poc2repoA/.github/workflows/build.yml@${{ github.event.inputs.branch }}
     with:
-      branch: ${{ inputs.branch }}
+      branch: ${{ github.event.inputs.branch }}
