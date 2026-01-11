@@ -11,6 +11,10 @@ on:
         default: 'main'
         type: string
 
+# Note: Using @main for workflow refs because GitHub Actions validation doesn't support expressions
+# like ${{ inputs.branch }} or ${{ github.event.inputs.branch }} in 'uses' for reusable workflows.
+# The branch input is passed to the called workflows for checkout and building.
+
 jobs:
   build-repoA:
     uses: ismenablement/poc2repoA/.github/workflows/build.yml@main
