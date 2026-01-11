@@ -158,7 +158,7 @@ jobs:
         else
           echo "   ⏭️  Skipping workflow dispatch test (no workflow specified)"
         fi
-    - name: Trigger workflow and wait
+    - name: Trigger workflow
       if: inputs.workflow != ''
       run: |
         echo "Triggering ${{ inputs.workflow }} on ${{ inputs.repo }}..."
